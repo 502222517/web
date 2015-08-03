@@ -1,0 +1,42 @@
+.container { 
+  width: 200px;
+  height: 260px;
+  position: relative;
+  perspective: 800px;
+}         
+
+#card {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+  transition: transform 1s;
+}
+
+#card figure {
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}     
+#card .front,#card .back{
+	overflow: hidden;
+}
+#card .front {
+  /*background: red;*/
+}
+#card .back {
+  /*background: blue;*/
+  transform: rotateY( 180deg );
+}  
+#card.disabled {
+  pointer-events: none;
+}
+.flip-itmes,.flip-itmes>.flip-itme{
+	width: 100%;
+	height: 100%;
+}
+.flip-itmes>.flip-itme{
+}
+

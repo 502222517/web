@@ -1,0 +1,38 @@
+<!DOCTYPE  html>
+<html ng-app="homeApp">
+	<head>
+		<meta charset="utf-8" />
+		<title ng-bind="pageTitle || '翻转'"></title>
+		<meta content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0,user-scalable=no" name="viewport" id="viewport">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta content="telephone=no" name="format-detection" />
+        <link rel="stylesheet" href="../css/base.css" />
+         <link rel="stylesheet" href="../css/flip.css" />
+	</head>
+	<body>
+		<div id="main" ng-controller='flipMain'>
+			
+			<section class="container">
+			  <div id="card" ng-class="flipCss" style="{{rotateY}}">
+			    <figure class="front">
+			    	<ul class="flip-itmes">
+			    		<li ng-repeat="question in questions1" ng-click="flipped($index,1,question.sortIndex)" ng-show="question.isShow" 
+			    		class="flip-itme" style="background-color: {{question.bgColor}};">{{question.name}}</li>
+			    	</ul>
+			    </figure>
+			    <figure class="back">
+			    	<ul class="flip-itmes">
+			    		<li ng-repeat="question in questions2" ng-click="flipped($index,2,question.sortIndex)" ng-show="question.isShow" 
+			    		class="flip-itme" style="background-color: {{question.bgColor}};">{{question.name}}</li>
+			    	</ul>
+			    </figure>
+			  </div>
+			</section>    
+					 
+		</div>
+		<script type="text/javascript" src="../components/angular/angular.js"></script>
+		<script type="text/javascript" src="../js/flip.js"></script>
+		 
+	</body>
+</html>

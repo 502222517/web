@@ -1,0 +1,25 @@
+{
+ 	"name": "zhh",
+  	"description": "fis angular 测试",
+  	"version":"1.0.0", 
+  	"keywords": [
+	    "fis",
+	    "angular"
+	],
+	"protocol":"github",
+	"gitlab": {
+    	"author": "fis-components"
+	},
+	"github": {
+	    "author": "fis-components"
+	},
+	"lights":{
+		"repos": "example.duapp.com"
+	},
+	"dependencies":{
+		"angular":"<=1.3.14",
+		"bootstrap":"<=3.3.4"
+	}
+}
+
+

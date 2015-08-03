@@ -1,0 +1,109 @@
+/* reset begin */
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video, input  {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+input,textarea{
+    outline: none;
+    resize: none;
+    font-family: 'Microsoft Yahei','Droid Sans Fallback',sans-serif;
+}
+
+html, body, form, fieldset, p, div, h1, h2, h3, h4, h5, h6 {
+    -webkit-text-size-adjust: none;
+}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+
+body {
+    font-family: arial, sans-serif;
+}
+
+ol, ul {
+    list-style: none;
+}
+
+blockquote, q {
+    quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+    content: '';
+    content: none;
+}
+
+ins {
+    text-decoration: none;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/* reset end */
+
+/* public begin */
+html { height: 100%; font-size:62.5%}
+body{
+    position:relative;
+    width: 100%;
+    font-size: 1rem;
+    font: 1.4rem/1.5 normal 'Microsoft Yahei','Droid Sans Fallback',arial,sans-serif;
+}
+.box{
+    display: -moz-box;
+    display: -webkit-box;
+    display: -o-box;
+    display: -ms-box;
+    display: box;
+}
+.box-flex-1{
+    -moz-box-flex: 1;
+    -webkit-box-flex: 1;
+    -ms-box-flex: 1;
+    box-flex: 1;
+}
+.box-flex-2{
+    -moz-box-flex: 2;
+    -webkit-box-flex: 2;
+    -ms-box-flex: 2;
+    box-flex: 2;
+}
+.box-flex-3{
+    -moz-box-flex: 3;
+    -webkit-box-flex: 3;
+    -ms-box-flex: 3;
+    box-flex: 3;
+}
+.clear{
+    clear: both;
+}
+.backdrop{
+    opacity: .3;
+    background-color: #000;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9998;
+    transition: opacity .15s linear 0s;
+}
+
+
