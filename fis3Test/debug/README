@@ -1,0 +1,41 @@
+FIS3 打包说明
+
+本项目基于百度FIS作为前端自动化构建工具
+=====================================
+
+##安装 Node 和 NPM
+详细过程参考官网 https://nodejs.org
+
+##安装 FIS3
+npm install -g fis3
+安装完成后执行 fis3 -v 判断是否安装成功
+
+
+#安装插件  npm install   
+npm install -g fis3-hook-module
+npm install -g fis3-hook-relative
+ 
+# 开发阶段 dev.bat
+#-wL 表示监视文件改变,自动进行发布,并自动刷新浏览器
+fis3 release -d ../debug -wL
+
+# 发布生产站(性能优化),采用增量式发布  pro.bat
+# -opm  优化打包
+fis3 release -d ../dist -opm
+
+#程序停止用快捷键 CTRL+c
+
+内置的规范包括：
+
+
+==========================
+ 
+内置的规范包括：
+1. 扔在 ``modules`` 目录下的js、css、less、coffee文件都是模块化文件，会自动包装define，自己就不要写了。
+2. CSS加载规则,当css文件与模块同名,则自动加载该CSS。
+3. 扔在 ``lib`` 目录下的文件不被认为是模块化的，请直接在页面上使用script或link标签引用。
+
+==========================
+
+
+
