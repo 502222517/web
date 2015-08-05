@@ -1,0 +1,19 @@
+
+gulp 打包配置demo
+
+1.安装nodejs、npm。
+
+2.全局安装gulp
+npm install -global gulp
+
+3.在项目的devDependencies下安装gulp
+npm install --save-dev gulp
+
+4.创建gulpfile.js 文件
+
+5.运行gulp
+
+
+
+
+

@@ -1,0 +1,84 @@
+{
+    "res": {
+        "lib/html5shiv.min.js": {
+            "uri": "/dist/lib/html5shiv.min.js",
+            "type": "js"
+        },
+        "lib/mod.js": {
+            "uri": "/dist/lib/mod.js",
+            "type": "js"
+        },
+        "app/main": {
+            "uri": "/dist/modules/app/main.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "backbone",
+                "app/routers/router",
+                "json"
+            ],
+            "id": "app/main"
+        },
+        "app/routers/router": {
+            "uri": "/dist/modules/app/routers/router.js",
+            "type": "js",
+            "deps": [
+                "backbone",
+                "app/views/home/home"
+            ],
+            "id": "app/routers/router"
+        },
+        "app/views/home/home": {
+            "uri": "/dist/modules/app/views/home/home.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "underscore",
+                "backbone",
+                "epoxy/backbone.epoxy"
+            ],
+            "id": "app/views/home/home"
+        },
+        "backbone": {
+            "uri": "/dist/modules/backbone/backbone.js",
+            "type": "js",
+            "deps": [
+                "underscore"
+            ],
+            "id": "backbone"
+        },
+        "common/basis": {
+            "uri": "/dist/modules/common/basis.js",
+            "type": "js"
+        },
+        "epoxy/backbone.epoxy": {
+            "uri": "/dist/modules/epoxy/backbone.epoxy.js",
+            "type": "js",
+            "deps": [
+                "underscore",
+                "backbone"
+            ],
+            "id": "epoxy/backbone.epoxy"
+        },
+        "iscroll/iscroll-probe": {
+            "uri": "/dist/modules/iscroll/iscroll-probe.js",
+            "type": "js"
+        },
+        "jquery": {
+            "uri": "/dist/modules/jquery/jquery.js",
+            "type": "js",
+            "id": "jquery"
+        },
+        "json": {
+            "uri": "/dist/modules/json/json.js",
+            "type": "js",
+            "id": "json"
+        },
+        "underscore": {
+            "uri": "/dist/modules/underscore/underscore.js",
+            "type": "js",
+            "id": "underscore"
+        }
+    },
+    "pkg": {}
+}
