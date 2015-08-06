@@ -15,7 +15,7 @@ Workspace = Backbone.Router.extend({
 		var routes={
 			'':'index',  // 首页
 			 
-			 
+			
 			'*filter': 'setFilter'
 		};
 		
