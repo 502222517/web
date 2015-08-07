@@ -14,8 +14,8 @@ Workspace = Backbone.Router.extend({
 		
 		var routes={
 			'':'index',  // 首页
-			 
-			 
+			'todo':'todo',
+			
 			'*filter': 'setFilter'
 		};
 		
@@ -37,6 +37,12 @@ Workspace = Backbone.Router.extend({
 	    var $this=this;
 	    var HomeView=require('app/views/home/home');
 	    
+	    var view=new HomeView();
+	},
+	todo:function(){
+		var TodoView=require('app/views/todo/todo');
+	    
+	    var view=new TodoView();
 	}
 });
 

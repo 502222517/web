@@ -4,27 +4,72 @@
             "uri": "/dist/lib/html5shiv.min.js",
             "type": "js"
         },
+        "lib/jquery.js": {
+            "uri": "/dist/lib/jquery.js",
+            "type": "js"
+        },
         "lib/mod.js": {
             "uri": "/dist/lib/mod.js",
             "type": "js"
+        },
+        "app/Base/BaseModel": {
+            "uri": "/dist/modules/app/Base/BaseModel.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "underscore",
+                "backbone"
+            ]
+        },
+        "app/Base/BaseView": {
+            "uri": "/dist/modules/app/Base/BaseView.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "underscore",
+                "backbone",
+                "epoxy/backbone.epoxy"
+            ]
+        },
+        "app/collections/todos": {
+            "uri": "/dist/modules/app/collections/todos.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "underscore",
+                "backbone",
+                "app/models/todo"
+            ],
+            "id": "app/collections/todos"
         },
         "app/main": {
             "uri": "/dist/modules/app/main.js",
             "type": "js",
             "deps": [
-                "jquery",
                 "backbone",
                 "app/routers/router",
-                "json"
+                "json",
+                "jquery"
             ],
             "id": "app/main"
+        },
+        "app/models/todo": {
+            "uri": "/dist/modules/app/models/todo.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "underscore",
+                "backbone"
+            ],
+            "id": "app/models/todo"
         },
         "app/routers/router": {
             "uri": "/dist/modules/app/routers/router.js",
             "type": "js",
             "deps": [
                 "backbone",
-                "app/views/home/home"
+                "app/views/home/home",
+                "app/views/todo/todo"
             ],
             "id": "app/routers/router"
         },
@@ -38,6 +83,24 @@
                 "epoxy/backbone.epoxy"
             ],
             "id": "app/views/home/home"
+        },
+        "app/views/todo/todo": {
+            "uri": "/dist/modules/app/views/todo/todo.js",
+            "type": "js",
+            "deps": [
+                "jquery",
+                "underscore",
+                "backbone",
+                "epoxy/backbone.epoxy",
+                "app/collections/todos",
+                "modules/app/views/todo/todo.less"
+            ],
+            "id": "app/views/todo/todo"
+        },
+        "modules/app/views/todo/todo.less": {
+            "uri": "/dist/modules/app/views/todo/todo.css",
+            "type": "css",
+            "id": "modules/app/views/todo/todo.less"
         },
         "backbone": {
             "uri": "/dist/modules/backbone/backbone.js",

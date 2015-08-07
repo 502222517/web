@@ -1004,6 +1004,7 @@
     constructor: function(options) {
       _.extend(this, _.pick(options||{}, viewProps));
       _super(this, 'constructor', arguments);
+     
       this.applyBindings();
     },
 
@@ -1028,7 +1029,6 @@
     // changes in configuration to source attributes or view bindings will require a complete re-bind.
     applyBindings: function() {
       this.removeBindings();
-
       var self = this;
       var sources = _.clone(_.result(self, 'bindingSources'));
       var declarations = self.bindings;

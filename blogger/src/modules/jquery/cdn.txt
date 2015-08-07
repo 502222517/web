@@ -1,0 +1,4 @@
+<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
+<script src="/lib/jquery.js"></script>
+
+
