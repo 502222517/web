@@ -29,7 +29,8 @@
                 "underscore",
                 "backbone",
                 "epoxy/backbone.epoxy"
-            ]
+            ],
+            "id": "app/Base/BaseView"
         },
         "app/collections/todos": {
             "uri": "/dist/modules/app/collections/todos.js",
@@ -93,6 +94,7 @@
                 "backbone",
                 "epoxy/backbone.epoxy",
                 "app/collections/todos",
+                "app/Base/BaseView",
                 "modules/app/views/todo/todo.less"
             ],
             "id": "app/views/todo/todo"

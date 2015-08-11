@@ -3,6 +3,7 @@ var _=require('underscore');
 var Backbone=require('backbone');
 var Epoxy=require('epoxy/backbone.epoxy');
 var TodosCollection=require('app/collections/todos');
+var BaseView=require('app/Base/BaseView')
 
 window.Backbone=Backbone;
 
@@ -10,7 +11,6 @@ var TodoItemView = Backbone.Epoxy.View.extend({
 //template:__inline('app/templates/todo/todo.tmpl'),
 	el:__inline('app/templates/todo/todo.tmpl')(),
 //	el:"<li><input type='checkbox'> <input type='text' class='todo'></li>",
-  setterOptions: {save: true},
   bindings: {
     "input[type='text']": "value:todo,readonly:complete",
     "input[type='checkbox']": "checked:complete"
@@ -30,8 +30,7 @@ var TodoAppView = Backbone.Epoxy.View.extend({
 //template: __inline('app/templates/todo/todos.tmpl'),
   collection: new TodosCollection(),
   itemView: TodoItemView,
-  el:'#epoxy-todo-app',
-//el:$(__inline('app/templates/todo/todos.tmpl')()),
+  el:$(__inline('app/templates/todo/todos.tmpl')()),
   events: {
     "click .add": "onAdd",
     "click .cleanup": "onCleanup",
@@ -39,19 +38,16 @@ var TodoAppView = Backbone.Epoxy.View.extend({
   },
   initialize: function() {
      var $this=this;
-//   $('#container').append($this.$el);
-  },   
+     $('#container').append($this.$el);
+  }, 
   onEnter: function( evt ) {
     if ( evt.which == 13 ) this.onAdd();
   },
   onAdd: function() {
     var input = this.$(".todo-add");
     if ( input.val() ) {
-    	this.collection.add({todo: input.val()});
-    	
-//      this.collection.create({todo: input.val()});
+    	  this.collection.add({todo: input.val()});
         input.val("");
-        console.log(' this.collection', this.collection.length)
     }
   },
   onCleanup: function() {

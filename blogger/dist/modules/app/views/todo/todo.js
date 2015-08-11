@@ -3,6 +3,7 @@ var _=require('underscore');
 var Backbone=require('backbone');
 var Epoxy=require('epoxy/backbone.epoxy');
 var TodosCollection=require('app/collections/todos');
+var BaseView=require('app/Base/BaseView')
 
 window.Backbone=Backbone;
 
@@ -16,7 +17,6 @@ __p+='<li>\r\n\t<input type=\'checkbox\'   > \r\n\t<input type=\'text\' class=\'
 return __p;
 }(),
 //	el:"<li><input type='checkbox'> <input type='text' class='todo'></li>",
-  setterOptions: {save: true},
   bindings: {
     "input[type='text']": "value:todo,readonly:complete",
     "input[type='checkbox']": "checked:complete"
@@ -36,8 +36,13 @@ var TodoAppView = Backbone.Epoxy.View.extend({
 //template: __inline('app/templates/todo/todos.tmpl'),
   collection: new TodosCollection(),
   itemView: TodoItemView,
-  el:'#epoxy-todo-app',
-//el:$(__inline('app/templates/todo/todos.tmpl')()),
+  el:$(function(obj){
+var __t,__p='',__j=Array.prototype.join,print=function(){__p+=__j.call(arguments,'');};
+with(obj||{}){
+__p+='<div id="epoxy-todo-app">\r\n  <b>What do you need to do?</b>\r\n  <p>\r\n    <input type="text" class="todo-add">\r\n    <button class="add">Add</button>\r\n  </p>\r\n  <ul class="todos" data-bind="collection:$collection"></ul>\r\n  <button class="cleanup">Clear complete</button>\r\n</div>';
+}
+return __p;
+}()),
   events: {
     "click .add": "onAdd",
     "click .cleanup": "onCleanup",
@@ -45,19 +50,16 @@ var TodoAppView = Backbone.Epoxy.View.extend({
   },
   initialize: function() {
      var $this=this;
-//   $('#container').append($this.$el);
-  },   
+     $('#container').append($this.$el);
+  }, 
   onEnter: function( evt ) {
     if ( evt.which == 13 ) this.onAdd();
   },
   onAdd: function() {
     var input = this.$(".todo-add");
     if ( input.val() ) {
-    	this.collection.add({todo: input.val()});
-    	
-//      this.collection.create({todo: input.val()});
+    	  this.collection.add({todo: input.val()});
         input.val("");
-        console.log(' this.collection', this.collection.length)
     }
   },
   onCleanup: function() {

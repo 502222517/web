@@ -1,4 +1,4 @@
-define('app/Base/BaseModel', function(require, exports, module){ var $=require('jquery');
+define('app/base/BaseModel', function(require, exports, module){ var $=require('jquery');
 var _=require('underscore');
 var Backbone=require('backbone');
 
