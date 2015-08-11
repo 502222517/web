@@ -1024,7 +1024,7 @@
     // Accepts a custom option '{save:true}' that will write to the model via ".save()".
     setterOptions: null,
 
-    // Compiles a model context, then applies bindings to the view:
+    // Compilationses a model context, then applies bindings to the view:
     // All Model->View relationships will be baked at the time of applying bindings;
     // changes in configuration to source attributes or view bindings will require a complete re-bind.
     applyBindings: function() {
@@ -1036,7 +1036,9 @@
       var handlers = _.clone(bindingHandlers);
       var filters = _.clone(bindingFilters);
       var context = self._c = {};
-
+      
+//    console.log('applyBindings',handlers,filters)
+      
       // Compile a complete set of binding handlers for the view:
       // mixes all custom handlers into a copy of default handlers.
       // Custom handlers defined as plain functions are registered as read-only setters.
