@@ -81,7 +81,8 @@
                 "jquery",
                 "underscore",
                 "backbone",
-                "epoxy/backbone.epoxy"
+                "epoxy/backbone.epoxy",
+                "app/Base/BaseView"
             ],
             "id": "app/views/home/home"
         },

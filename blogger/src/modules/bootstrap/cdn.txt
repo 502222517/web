@@ -14,6 +14,7 @@
  <!-- 让IE6-IE8支持HTML5标签 和 媒体查询   -->
 <!--[if lt IE 9]>
   <script src="//cdn.bootcss.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+  
   <script src="//cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
 

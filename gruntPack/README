@@ -1,0 +1,17 @@
+各类项目grunt打包案例。
+devDependencies.json  为插件列表，可以直接放在package.json中.
+
+打包步骤说明：
+   1.安装nodejs 、npm
+   2.安装grunt cli  // npm install -g grunt-cli
+   3.安装grunt 插件
+   4.编写Gruntfile.js文件
+   5.运行grunt 打包
+
+一、单页打包  single 
+
+
+二、多页打包 multiple   
+
+
+三、合并打包 merge 

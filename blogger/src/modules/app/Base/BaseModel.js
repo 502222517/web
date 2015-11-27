@@ -9,7 +9,7 @@ var BaseModel= Backbone.Model.extend({
 	  },
 	  save:function(){   // 禁止自动保存
 	  	
-//	  	console.log('save',arguments)
+//	  	console.log('save',arguments);
 
 	  }
 });

@@ -1,0 +1,23 @@
+html,body{
+	height: 100%;
+	background: #fcfcfc;
+}
+#main{
+	margin: auto;
+	padding: 10px;
+	border: 1px solid red;
+}
+#main .title{
+	font-weight: bold;
+	color: blue;
+}
+.img-box{
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+.img-box img{
+	border: none;
+	width: 100%;
+	height: auto;
+}
